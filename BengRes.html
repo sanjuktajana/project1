@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restoran | Bengali Restaurants</title>
+<link rel="stylesheet" href="#style">
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: comic sans ms;
+    scroll-behavior: smooth;
+    }
+    section{
+    height: 100vh;
+    }
+    .up1{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(https://im1.dineout.co.in/images/uploads/restaurant/sharpen/3/d/z/p3838-14789372195826ca83a6f45.jpg?w=1200);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .NvBar{
+    width: 90%;
+    height: fit-content;
+    margin: 0.2%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: fixed;
+    }
+    .logo{
+        width: 180px;
+        height: 180px;
+        cursor: pointer;
+        filter: drop-shadow(1px 4px 1px  rgba(84, 29, 0, 0.793));
+        padding-block: 10%;
+        padding-top: 12%;
+        margin-top: 55px;
+    }
+        .NvBar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+        padding-block: 0.1%;
+        }
+        .NvBar ul li a{
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        }
+    .NvBar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #A52A2A;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    }
+    .NvBar ul li:hover::after{
+    width: 100%;
+    }
+    .sticky .NvBar{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 0000;
+        box-shadow: var(--shadow);
+    }
+    .sticky .NvBar:hover{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 9999;
+        background-color: rgba(77, 12, 0, 0.888);
+        box-shadow: var(--shadow);
+        transition: 0.5s ease-in-out;
+    }
+    .name{
+        width: 70%;
+        position: absolute;
+        top: 20%;
+        transform: translateY(30%);
+        text-align: center;
+        color: #fff;
+        }
+        .name h3{
+        font-size: 90px;
+        font-family: garamond;
+        margin-top: 10px;
+        margin-left: 39%;
+        text-align: center;
+        }
+        .name p{
+        margin: 80px auto;
+        margin-left: 39%;
+        font-size: 50px;
+        font-family: garamond;
+        line-height: 25px;
+        text-align: center;
+        }
+        .up ul li{
+            list-style: none;
+            margin-top: 200px;
+            width: 1000px;
+            text-align: left;
+            margin: 20px 10px;
+            margin-right: 0px;
+            background: transparent;
+            cursor: pointer;
+            }
+            .up a{
+            color: #800000;
+            font-family: serif;
+            font-weight: bolder;
+            font-size: 70px;
+            text-decoration: none;
+            }
+            .up p{
+            text-align: left;
+            font-size: 30px;
+            font-family: serif;
+            font-weight: bolder;
+            margin: 20px 20px;
+            color: rgb(226, 154, 77);
+            }
+            :root{
+                --primary: hsla(35, 100%, 21%, 0.733);
+                --secondary: hsla(108, 100%, 25%, 0.733);
+            }
+            .load{
+                background: url(welcome.gif) no-repeat center center, linear-gradient(135deg, var(--primary), var(--secondary)),rgb(0, 0, 0) ;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                background-size: 30%;
+                background-position: center;
+                z-index: 100;
+            }
+::-webkit-scrollbar{
+    width:0.5rem;
+    height:50 px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--black);
+    background: brown;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--black);
+    background: white;
+    border-radius:0.4rem;
+    border:0.1rem solid transparent;
+    background-clip:content-box;
+}
+.to-top{
+                background: hsl(89, 15%, 40%);
+                position: fixed;
+                bottom: 40px;
+                right: 32px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 22px;
+                color: black;
+                text-decoration: none;
+            }
+             .to-top.active {
+                bottom: 32px;
+                pointer-events: auto;
+                opacity: 1;
+             }
+             /* The container <div> - needed to position the dropdown content */
+         .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          .dropdown:hover .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          
+          /* Dropdown Content (Hidden by Default) */
+          .drp-cnt {
+            margin: 0px 0px 0px 0px;
+            display: none;
+            position:absolute;
+            width: 120px;
+            align-items: center;
+            top: 34px;
+            z-index: 1;
+          }
+          .dropdown:hover .drp-cnt {
+            display: block;
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+        }
+          
+          /* Show the dropdown menu on hover */
+        .drp-cnt img{  
+            padding: 0px 0px 0px 0px;
+            border: 1px solid rgb(49, 0, 0);
+            display: block;
+            transition: all 0.5s ease-in-out;
+            background: rgba(98, 52, 3, 0.832);
+            align-items: center;
+            margin: 0px 0px 0px 0px;
+            max-width: 87%;
+            max-height: 90%;
+            filter: drop-shadow(10px 10px 10px rgb(51, 18, 0));
+        }
+        .s-about{
+            height: 50vh;
+        background-color: rgba(70, 18, 0, 0.732);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .s-about p{
+            color: rgb(68, 14, 0);
+            text-align: center;
+            top: 315%;
+        }
+</style>
+
+<body class="sticky">
+    <div id="load">
+
+    </div>
+    <section class="up1" id="BR">
+<div class="NvBar">
+<a href="onepg1.html">
+<abbr title="Restoran.com"><img src="img/renstora.svg" class="logo"></abbr>
+</a>
+<ul>
+<li><a class="up-link" href="#res">Restaurants</a></li>
+<li><a href="new con.html">Contacts</a></li>
+</ul>
+</div>
+</section>
+<div class="name">
+<h3>BENGALI RESTAURANTS</h3>
+<p>Check Below</p>
+</div>
+</div>
+<section class="up" id="res">
+<div class="nme">
+<ul>
+    <div>
+<abbr title="6ballygungeplace.in"><h2><li><a href="https://6ballygungeplace.in/">6ballygungeplace</a></li></h2></abbr>
+<p>Address: 6, Dr Amiya Bose Sarani Rd, near Patha Bhavan School, Ballygunge Place, Ballygunge, Kolkata, West Bengal 700019.<br>Phone: 033 2460 3922</p>
+</div>
+<div>
+<abbr title="KosheKosha.com"><h2><li><a href="https://koshekosha.com/">Koshe Kosha</a></li></h2></abbr>
+<p>Address: 1/1C, Ripon Street, Mujafar Ahmed Street, near Park Street, Esplanade, Taltala, Kolkata, West Bengal 700016.<br>Phone: 098309 49494</p>
+</div>
+<div>
+<abbr title="Peerlesshotels.com"><h2><li><a href="https://peerlesshotels.com/the-peerless-inn/">Aaheli</a></li></h2></abbr>
+<p> Address: 12, Jawaharlal Nehru Rd, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700013.<br>Phone: 098317 80405</p>
+</div>
+<div>
+<abbr title="KasturiRestaurant.com"><h2><li><a href="https://kasturirestaurant.com/">Kasturi Restaurant</a></li></h2></abbr>
+<p>Address: 11 A, Hindustan road Doverlane, Gariahat, Hindustan Rd, B, Kolkata, West Bengal 700029.<br>Phone: 083349 22227</p>
+</div>
+<div>
+<abbr title="SholoanaBangali."><h2><li><a href="https://www.zomato.com/kolkata/sholoana-bangali-1-sector-5-salt-lake">Sholoana Bangali</a></li></h2></abbr>
+<p>Address: Plot 18, Block DN, Near College More, Tech Park, Sector 5, Salt Lake, Kolkata, West Bengal 700045. <br>Phone: 090512 11138</p>
+</div>
+</ul>
+</div>
+<div class="end">
+    <h1 style="background-color:black; text-align: center; color:white">.........THANK YOU.........</h1>
+    <h3 style="background-color:black; text-align: center; color:white">"Les Gourmand"</h3>
+</div>
+</section>
+
+<script>
+    var loader=document.getElementById("load");
+    window.addEventListener("pre", function(){
+        loader.setup.display="none";
+    })
+</script>
+<script>
+    var scroll1 = window.pageYOffset;
+    window.onscroll = function(){
+        var scroll2 = window.pageYOffset;
+        if (scroll1 > scroll2){
+            document.querySelector('NvBar').style.top = "0";
+        }else{
+            document.querySelector('NvBar').style.top = "-100px";
+        }
+        scroll1=scroll2;
+        }
+</script>
+<a href="#BR" class="to-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://kit.fontawesome.com/03af8a5f7a.js" crossorigin="anonymous">
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", () =>{
+        if (window.pageYOffset > 100) {
+          toTop.classList.add("active");  
+        }else {
+          toTop.classList.remove("active");
+        }
+    }) 
+    </script>
+</body>
+</html>

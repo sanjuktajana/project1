@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restoran.com</title>
+<link rel="stylesheet" href="#style">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0.5px 0px ;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    font-family: Garamond;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    }
+    section{
+    height: 100vh;
+    }
+    .reg{
+    height: 110vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.056),rgba(0, 0, 0, 0.062)),url(/img/back.svg);
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgb(255 255 255);
+    background-position-x: 10%;
+    }
+    
+    .s-home{
+        height: 100vh;
+        background-image: linear-gradient(rgb(42, 22, 5, 0.744),rgba(42, 22, 5, 0.744)),url(https://www.hungryforever.com/wp-content/uploads/2019/03/meal-1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .s-reveiws {
+            height: 250vh;
+margin: 0 auto; /* Center website */
+max-width: 2000px; /* Max width */
+padding: 20px;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgOLBdcjONSO47KfmI-nUV6gRG-maPO3Q-I7wd3GOpfxDfpne.jpg_);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.s-reveiws *{
+  box-sizing: border-box;
+}
+#RR {
+  background-color: #ebebeb;
+  color: black;
+}
+#RR:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+#RR2 {
+  width: 200px;
+  color: white;
+  background-color: #0e3721;
+  font-size: 20px;
+}
+
+#RR2:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+#RR3 {
+  background-color: #ebebeb;
+  overflow: hidden;
+  height: 10rem;
+}
+#RR3:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 12em;
+  width: 680px;
+  transition: ease 0.5s;
+}
+.RR4 {
+  background-color: lightgrey;
+  width: 700px;
+  border: 10px solid green;
+  padding: 50px;
+  margin-right: 10px;
+  margin-left: 390px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px green;
+}
+.RR4 p{
+    font-family: Garamond;
+    font-size: 30px;
+    color: brown;
+}
+.heading {
+font-size: 25px;
+margin-right: 25px;
+}
+.fa {
+font-size: 25px;
+}
+.checked {
+color: orange;
+}
+.side {
+float: left;
+width: 15%;
+margin-top: 10px;
+}
+.middle {
+float: left;
+width: 70%;
+margin-top: 10px;
+}
+.right {
+text-align: right;
+}
+.row0:after {
+content: "";
+display: table;
+clear: both;
+}
+.bar-container {
+width: 100%;
+background-color: #f1f1f1;
+text-align: center;
+color: white;
+}
+.bar-5 {width: 50%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 20%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 7%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 10%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 13%; height: 18px; background-color: #f44336;}
+@media (max-width: 400px) {
+.side, .middle {
+width: 100%;
+}
+.right {
+display: none;
+}
+}
+        .s-about{
+            height: 50vh;
+        background-color: rgba(70, 18, 0, 0.732);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .s-about p{
+            color: rgb(68, 14, 0);
+            text-align: center;
+            top: 315%;
+        }
+        .register{
+            height: 1%;
+            filter: drop-shadow(black);
+        }
+    .NvBar{
+    width: 90%;
+    height: fit-content;
+    margin: 0.2%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: fixed;
+    }
+    .logo{
+        width: 180px;
+        height: 180px;
+        cursor: pointer;
+        filter: drop-shadow(1px 4px 1px  rgba(84, 29, 0, 0.793));
+        padding-block: 10%;
+        padding-top: 12%;
+        margin-top: 55px;
+    }
+       /*<!-- .logo .brdr{
+  border-style : Solid;
+  border-color : #FFFFFF;
+  border-color : rgba(255, 255, 255, 1);
+  border-width : 15px;
+  position : absolute ;
+  left : 169px;
+  top : 40px;
+  width : 259px;
+  height : 308px;
+        }-->*/
+/*.logo .brdr .lttr{
+  background-image : url(/img/SVG/r.svg);
+  /*To create image referenced in CSS, use \'Export Selected CSS\' command.
+  background-repeat : no-repeat;
+  position : absolute ;
+  left : 250px;
+  top : 69px;
+  width : 57px;
+  height : 95px;
+}*/
+    .NvBar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    padding-block: 0.1%;
+    }
+    .NvBar ul li a{
+    text-decoration:dotted;
+    color: #fff;
+    text-transform: uppercase;
+    filter: drop-shadow(black);
+    }
+    .NvBar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #fcb00b;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    }
+    .NvBar ul li:hover::after{
+    width: 100%;
+    }
+    .sticky .NvBar{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 0000;
+        box-shadow: var(--shadow);
+        transition: 0.5s ease-in-out;
+    }
+    .sticky .NvBar:hover{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 9999;
+        background-color: rgba(100, 40, 2, 0.727);
+        box-shadow: var(--shadow);
+    }
+        .signupin{
+            width: 100%;
+            position: absolute;
+            top: 20%;
+            transform: translateY(50%);
+            text-align: center;
+            color: #fff;
+            filter: drop-shadow(1px 3px 6px rgb(0, 0, 0));
+            }
+            .signupin:hover{
+            width: 100%;
+            position: absolute;
+            top: 20%;
+            transform: translateY(50%);
+            text-align: center;
+            color: #fff;
+            filter: drop-shadow(1px 3px 6px rgb(0, 0, 0));
+            }
+            .signupin h1{
+            font-size: 60px;
+            margin-top: 0.5px;
+            margin-left: 40px;
+            text-align: left;
+            filter: drop-shadow(2px 6px 2px  rgb(0, 0, 0));
+            }
+            .signupin h3{
+            font-size: 40px;
+            margin-top: 0.5px;
+            margin-left: 40px;
+            text-align: left;
+            filter: drop-shadow(2px 6px 2px  rgb(0, 0, 0));
+            }
+            button{
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #00FF00;
+            background: transparent;
+            color: #fff;
+            filter: drop-shadow(1px 3px 6px rgb(3, 19, 0));
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            }
+            button:hover{
+                width: 200px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #00FF00;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            }
+            span{
+            background: #008000;
+            height: 100%;
+            width: 0%;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+            }
+            button:hover span{
+            width: 100%
+            }
+            :root{
+                --primary: hsla(35, 100%, 21%, 0.733);
+                --secondary: hsla(108, 100%, 25%, 0.733);
+            }
+            .load{
+                background: url(welcome.gif) no-repeat center center, linear-gradient(135deg, var(--primary), var(--secondary)),rgb(0, 0, 0) ;
+                height: 100vh;
+                width: 100%;
+                position: fixed;
+                background-size: 30%;
+                background-position: center;
+                z-index: 100;
+            }
+            .row{
+                display: inline-flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 300px;
+                margin-bottom: 80px;
+                margin-right: 0.1%;
+            }
+            .col3{
+                flex-basis: 30%;
+                min-width: 150px;
+                margin-bottom: 30px;
+            }
+            .col3 img{
+                max-width: 70%;
+                max-height: 65%;
+                padding: 5px 5px;
+                border-radius: 15px;
+            }
+        .card{
+            height: 10vh;
+            width: 20%;
+            background: rgba(61, 32, 2, 0.675);
+            border: 1px solid rgb(255, 234, 234);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            transition: 0.3s ease-in-out;
+    }
+    .card:hover {
+            height: 40vh;
+            box-shadow: 0 5px 20px black;
+            border: 1px solid rgb(196, 97, 22);
+            border-radius: 15px;
+          }
+          .card0{
+            height: 10vh;
+            width: 20%;
+            background: rgba(61, 32, 2, 0.675);
+            border: 1px solid rgb(255, 234, 234);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            transition: 0.3s ease-in-out;
+    }
+    .card0:hover {
+            height: 40vh;
+            box-shadow: 0 5px 20px black;
+            border: 1px solid rgb(196, 97, 22);
+            border-radius: 15px;
+          }
+          .card1{
+            height: 10vh;
+            width: 20%;
+            background: rgba(61, 32, 2, 0.675);
+            border: 1px solid rgb(255, 234, 234);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            transition: 0.3s ease-in-out;
+    }
+    .card1:hover {
+            height: 40vh;
+            box-shadow: 0 5px 20px black;
+            border: 1px solid rgb(196, 97, 22);
+            border-radius: 15px;
+          }
+          .card2{
+            height: 10vh;
+            width: 20%;
+            background: rgba(61, 32, 2, 0.675);
+            border: 1px solid rgb(255, 234, 234);
+            margin-bottom: 30px;
+            border-radius: 15px;
+            transition: 0.3s ease-in-out;
+    }
+    .card2:hover {
+            height: 40vh;
+            box-shadow: 0 5px 20px black;
+            border: 1px solid rgb(196, 97, 22);
+            border-radius: 15px;
+          }
+         .col3 p{
+            text-align: center;
+            color: rgb(255, 111, 0);
+            position: relative;
+            margin-top: -10px;
+            padding: 10px 25px;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s ease-in-out;
+        }
+        .card:hover .col3 p{
+            color: rgb(255, 191, 143);
+            opacity: 1;
+            text-align: center;
+            visibility: visible;
+            margin-top: -10px;
+            transition-delay: 0.1s;
+        }
+        .card0:hover .col3 p{
+            color: rgb(255, 191, 143);
+            opacity: 1;
+            text-align: center;
+            visibility: visible;
+            margin-top: -10px;
+            transition-delay: 0.1s;
+        }
+        .card1:hover .col3 p{
+            color: rgb(255, 191, 143);
+            opacity: 1;
+            text-align: center;
+            visibility: visible;
+            margin-top: -10px;
+            transition-delay: 0.1s;
+        }
+        .card2:hover .col3 p{
+            color: rgb(255, 191, 143);
+            opacity: 1;
+            text-align: center;
+            visibility: visible;
+            margin-top: -10px;
+            transition-delay: 0.1s;
+        }
+        .try{
+            width: 100%;
+            position: absolute;
+            top: 115%;
+            transform: translateY(50%);
+            text-align: center;
+            color: white;
+        }
+        .try h1{
+            font-size: 90px;
+        filter: drop-shadow(2px 6px 2px  rgb(0, 0, 0));
+            margin-top: 10.9px;
+            font-family: Sylfaen;
+        }
+         /* The container <div> - needed to position the dropdown content */
+         .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          .dropdown:hover .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          
+          /* Dropdown Content (Hidden by Default) */
+          .drp-cnt {
+            margin: 0px 0px 0px 0px;
+            display: none;
+            position:absolute;
+            width: 120px;
+            align-items: center;
+            top: 34px;
+            z-index: 1;
+          }
+          .dropdown:hover .drp-cnt {
+            display: block;
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+        }
+          
+          /* Show the dropdown menu on hover */
+        .drp-cnt img{  
+            padding: 0px 0px 0px 0px;
+            border: 1px solid rgb(49, 0, 0);
+            display: block;
+            transition: all 0.5s ease-in-out;
+            background: rgba(98, 52, 3, 0.832);
+            align-items: center;
+            margin: 0px 0px 0px 0px;
+            max-width: 87%;
+            max-height: 90%;
+            filter: drop-shadow(10px 10px 10px rgb(51, 18, 0));
+        }
+        ::-webkit-scrollbar{
+    width:0.5rem;
+    height:50 px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--black);
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--black);
+    background: black;
+    border-radius:0.4rem;
+    border:0.1rem solid transparent;
+    background-clip:content-box;
+}
+.to-top{
+                background: hsla(88, 15%, 40%, 0.629);
+                position: fixed;
+                bottom: 40px;
+                right: 32px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 22px;
+                color: black;
+                text-decoration: none;
+            }
+             .to-top.active {
+                bottom: 32px;
+                pointer-events: auto;
+                opacity: 1;
+             }
+</style>
+
+<body class="sticky">
+    <div id="load">
+
+    </div>
+    <main>
+<section class="register">
+<div class="NvBar">
+    <a href="onepg1.html">
+        <abbr title="Renstora.com"><img src="img/renstora.svg" class="logo"></abbr>
+    </a>
+<ul>
+<li><a class="home-link" href="#home">Home</a></li>
+<li><a class="reveiws-link" href="#reveiws">Reveiws</a></li>
+<div class="dropdown">
+    <li><a class="dropbtn" href="">About</a></li>
+    <div class="drp-cnt">
+      <a class="about-link" href="#about"><img src="https://cdn1.iconfinder.com/data/icons/man-pointing-finger-on-different-directions/238/man-pointing-finger-014-256.png"></a>
+    </div>
+</div>
+<li><a href="new con.html">Contacts</a></li>
+</ul>
+</div>
+</section>
+<section class="reg" id="ig">
+<div class="signupin">
+    <img src="https://www.hungryforever.com/wp-content/uploads/2019/03/meal-1.jpg" width="400" height="240" style="float:right; margin-right:40px; margin-top:0.2px; padding:2px">
+<h1>NAMASHKAR</h1>
+<h3>Here is RENSTORA for your cuisine !</h3>
+<div>
+<a href="su3.html"><button type="button"><span></span>Sign Up</button></a>
+<a href="index.html"><button type="button"><span></span>Sign In</button></a>
+</div>
+</div>
+</section>
+</main>
+<section class="s-home" id="home">
+        <div class="try">
+            <h1>CUISINE YOUR CHOICE</h1>
+        </div>
+        <div class="cuisine">
+            <div class="row">
+                <div class="card">
+                        <div class="col3">
+                            <a href="BengRes.html"><img src="https://img.traveltriangle.com/blog/wp-content/uploads/2017/11/cover20.jpg"></a><br>
+                            <p>Bengali Restaurants</p>
+                            <p>Available restaurants for now!!</p>
+                        </div>
+                </div>
+                <div class="card0">
+                        <div class="col3">
+                            <a href="south.html"><img src="https://media.istockphoto.com/photos/group-of-south-indian-food-like-masala-dosa-uttapam-idliidly-wadavada-picture-id1024558340?k=20&m=1024558340&s=612x612&w=0&h=30XScxXJ-EPLeNh9orcsKa4En-WZnWdsh9hrFpHVaXQ="></a><br>
+                            <p>South-Indian Restaurants</p>
+                            <p>Available restaurants for now!!</p>
+                        </div>
+                </div>
+                <div class="card1">
+                        <div class="col3">
+                            <a href="non.html"><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/02/07/15/chinese.jpg?width=1200"></a><br>
+                            <p>Chinese Restaurants</p>
+                            <p>Available restaurants for now!!</p>
+                        </div>
+                </div>
+                <div class="card2">
+                    <div class="col3">
+                        <a href="kfood.html"><img src="https://cdn.shopify.com/s/files/1/0600/5617/4741/files/chinese-cabbage-kimchi-cabbage-korean-traditional-food-top-view-flat-lay_2000x.jpg?v=1639277041"></a><br>
+                        <p>Korean Restaurants</p>
+                        <p>Available restaurants for now!!</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+    <section class="s-reveiws" id="reveiws">
+        <div>
+            <hr><h1 style="text-align:center;color:black;font-size:60px;font-family: Cascadia Code">REVIEWS</h1>
+            <p style="text-align:center;color:black;font-size:30px;font-family: Cascadia Code">See what our users have to say about us...</p>
+            </div>
+            <br>
+            <div class="RR4">
+                <p><i><b>"It's simple and straightforward. Easily the best website I have ever visited. Highly recommend to try."</b></i></p>
+            <p style="text-align:right;font-size:18px"><b>-Debdyuti Das</b></p><br>
+            <p><i><b>"Excellent website, with vast varieties! The dishes and restaurants are well organized, everything you need in one place."</b></i></p>
+            <p style="text-align:right;font-size:18px"><b>-Sanjukta Jana</b></p><br>
+            <p><i><b>"Terrific all around, a real timesaver. Easy to use layout ensures rapid browsing."</b></i></p>
+            <p style="text-align:right;font-size:18px"><b>-Suneet Choudhary</b></p><br>
+            <p><i><b>"I have been using it since it's inception. Plenty of restaurants to choose from. Truly a seamless experience."</b></i></p>
+            <p style="text-align:right;font-size:18px"><b>-Suprita Nandy</b></p><br>
+            </div>
+            <hr>
+            <div>
+            <h1 style="text-align:center;color:black;font-size:30px;font-family: Cascadia Code">User Ratings</h1>
+            </div>
+            <p><b>3.8 average based on 30 reviews.</b></p>
+            <hr style="border:3px solid #f1f1f1">
+            <div class="row0">
+            <div class="side">
+            <div>5 star </div>
+            </div>
+            <div class="middle">
+            <div class="bar-container">
+            <div class="bar-5"></div>
+            </div>
+            </div>
+            <div class="side right">
+            <div>15</div>
+            </div>
+            <div class="side">
+            <div>4 star</div>
+            </div>
+            <div class="middle">
+            <div class="bar-container">
+            <div class="bar-4"></div>
+            </div>
+            </div>
+            <div class="side right">
+            <div>6</div>
+            </div>
+            <div class="side">
+            <div>3 star</div>
+            </div>
+            <div class="middle">
+            <div class="bar-container">
+            <div class="bar-3"></div>
+            </div>
+            </div>
+            <div class="side right">
+            <div>2</div>
+            </div>
+            <div class="side">
+            <div>2 star</div>
+            </div>
+            <div class="middle">
+            <div class="bar-container">
+            <div class="bar-2"></div>
+            </div>
+            </div>
+            <div class="side right">
+            <div>3</div>
+            </div>
+            <div class="side">
+            <div>1 star</div>
+            </div>
+            <div class="middle">
+            <div class="bar-container">
+            <div class="bar-1"></div>
+            </div>
+            </div>
+            <div class="side right">
+            <div>4</div>
+            </div>
+            </div>
+            </div>
+            <hr><h1 style="text-align:center;color:black;font-size:30px;font-family: Cascadia Code" >Write a review..</h1><br>
+            <p style="font-size:20px;font-family: Cascadia Code">We thank you for visiting our website.</p><br>
+            <p style="font-size:20px;font-family: Cascadia Code">Kindly review & rate our service!</p><br>
+            <form action="/action_page.php" target="_blank">
+            <input type="text" placeholder="Name" required name="Name" id="RR">
+            <input type="number" placeholder="Rating (1-5)" required name="Rating" id="RR"><br><br>
+            <textarea placeholder="Your thoughts.." style="width:600px" id=RR3></textarea><br><br>
+            <button onclick="Thanks for taking the time to share your feedback" id=RR2>Submit</button>
+            </form>
+            </div>
+            </div>
+            </section>
+    <section class="s-about" id="about">
+        <div>
+            <p>ABOUT</p>
+        </div>
+    </section>
+    <div class="end">
+        <h1 style="background-color:black; text-align: center; color:white">.........THANK YOU.........</h1>
+        <h3 style="background-color:black; text-align: center; color:white">"Les Gourmand"</h3>
+    </div>
+    <a href="#home" class="to-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://kit.fontawesome.com/03af8a5f7a.js" crossorigin="anonymous">
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", () =>{
+        if (window.pageYOffset > 100) {
+          toTop.classList.add("active");  
+        }else {
+          toTop.classList.remove("active");
+        }
+    }) 
+    </script>
+</body>
+</html>

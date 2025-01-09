@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restoran | Chinese Restaurants</title>
+<link rel="stylesheet" href="non.css">
+</head>
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: comic sans ms;
+    scroll-behavior: smooth;
+    }
+    section{
+    height: 100vh;
+    }
+    .banner{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(https://media-cdn.tripadvisor.com/media/photo-s/23/5d/d3/0b/china-house-restaurant.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .NvBar{
+    width: 90%;
+    height: fit-content;
+    margin: 0.2%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: fixed;
+    }
+    .logo{
+        width: 180px;
+        height: 180px;
+        cursor: pointer;
+        filter: drop-shadow(0px 2px 1px  rgba(87, 36, 17, 0.793));
+        padding-block: 10%;
+        padding-top: 12%;
+        margin-top: 55px;
+    }
+    .NvBar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    }
+    .NvBar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    }
+    .NvBar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #A52A2A;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    }
+    .NvBar ul li:hover::after{
+    width: 100%;
+    }
+	.sticky .NvBar{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 0000;
+        box-shadow: var(--shadow);
+    }
+    .sticky .NvBar:hover{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 9999;
+        background-color: rgba(61, 0, 0, 0.888);
+        box-shadow: var(--shadow);
+        transition: 0.5s ease-in-out;
+    }
+    .name{
+        width: 70%;
+        position: absolute;
+        top: 20%;
+        transform: translateY(30%);
+        text-align: center;
+        color: #fff;
+        }
+        .name h3{
+			font-size: 90px;
+        font-family: a annyeong haseyo;
+        margin-top: 10px;
+        margin-left: 39%;
+        text-align: center;
+        }
+        .name p{
+        margin: 80px auto;
+        margin-left: 39%;
+        font-size: 50px;
+        line-height: 25px;
+        text-align: center;
+        font-family: a annyeong haseyo;
+        }
+        .up ul li{
+            list-style: none;
+            margin-top: 200px;
+            width: 1000px;
+            text-align: left;
+            margin: 20px 10px;
+            margin-right: 0px;
+            background: transparent;
+            cursor: pointer;
+            }
+            .up a{
+            color: #800000;
+            font-family: serif;
+            font-weight: bolder;
+            font-size: 70px;
+            }
+            .up p{
+            text-align: left;
+            font-size: 30px;
+            font-family: serif;
+            font-weight: bolder;
+            margin: 20px 20px;
+            color: rgb(208, 121, 67);
+            }
+            ::-webkit-scrollbar{
+                width:0.5rem;
+                height:50 px;
+            }
+            ::-webkit-scrollbar-track{
+                background-color: var(--black);
+                background: #280000;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: var(--black);
+                background: white;
+                border-radius:0.4rem;
+                border:0.1rem solid transparent;
+                background-clip:content-box;
+            }
+            .to-top{
+                background: hsl(89, 15%, 40%);
+                position: fixed;
+                bottom: 40px;
+                right: 32px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 22px;
+                color: black;
+                text-decoration: none;
+            }
+            /* The container <div> - needed to position the dropdown content */
+         .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          .dropdown:hover .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          
+          /* Dropdown Content (Hidden by Default) */
+          .drp-cnt {
+            margin: 0px 0px 0px 0px;
+            display: none;
+            position:absolute;
+            width: 120px;
+            align-items: center;
+            top: 34px;
+            z-index: 1;
+          }
+          .dropdown:hover .drp-cnt {
+            display: block;
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+        }
+          
+          /* Show the dropdown menu on hover */
+        .drp-cnt img{  
+            padding: 0px 0px 0px 0px;
+            border: 1px solid rgb(49, 0, 0);
+            display: block;
+            transition: all 0.5s ease-in-out;
+            background: rgba(98, 52, 3, 0.832);
+            align-items: center;
+            margin: 0px 0px 0px 0px;
+            max-width: 87%;
+            max-height: 90%;
+            filter: drop-shadow(10px 10px 10px rgb(51, 18, 0));
+        }
+        .s-about{
+            height: 50vh;
+        background-color: rgba(70, 18, 0, 0.732);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .s-about p{
+            color: rgb(68, 14, 0);
+            text-align: center;
+            top: 315%;
+        }
+</style>
+<body class="sticky">
+<div class="banner">
+<div class="NvBar">
+<a href="onepg1.html">
+<abbr title="Restoran.com"><img src="img/renstora.svg" class="logo"></abbr>
+</a>
+<ul>
+<li><a href="#res">Restaurants</a></li>
+<li><a href="new con.html">Contacts</a></li>
+</ul>
+</div>
+<div class="name">
+<h3>CHINESE <br> RESTAURANTS</h3>
+<p>Check Below</p>
+</div>
+</div>
+<div class="nme">
+<section class="up" id="res">
+<ul>
+    <div class="res1">
+        <abbr title="Tung Nam Eating House.com"><h4><li><a href="https://restaurant-guru.in/Tung-Nam-Kolkata-2">Tung Nam Eating House</a></li></h4></abbr>
+        <p>Address: 24, Chatta Wala Gully, Poddar Court, Tiretti, Kolkata, West Bengal 700012.<br>Phone: 033 2237 4434</p>
+    </div>
+
+    <div class="res2">
+        <abbr title="Tung Fong Restaurant.com"><h4><li><a href="https://www.swiggy.com/restaurants/tung-fong-central-taltala-kolkata-202889?is_retargeting=true&media_source=GooglePlaceOrder&utm_campaign=GoogleMap&utm_source=GooglePlaceOrder">Tung Fong Restaurant</a></li></h4></abbr>
+        <p>Address: Karnani Mansion, 25-B, Mirza Ghalib St, Taltala, Kolkata, West Bengal 700016.<br>Phone: 098315 72918</p>
+    </div>
+    
+    <div class="res3">
+        <abbr title="Haka.com"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/cq0M_BSq87k?source=pa&hl=en-IN&gei=kYwTY7HpOO6N4-EPoKCSsAs&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUjk3ozC5YCAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVIzZUU0Mk1uSkJSUkFCqgEkCggvbS8wMXh3ORABKhYiEmNoaW5lc2UgcmVzdGF1cmFudCgA%26phdesc%3D2h5S0KhiuKE%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:3778464744471789326,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Haka</a></li></h4></abbr>
+        <p> Address: HCQ5+4FJ, 1A Cross Rd, DC Block, Sector 1, Bidhannagar, Kolkata, West Bengal 700064.<br>Phone: 033 2358 1445</p>
+    </div>
+
+    <div class="res4">
+        <abbr title="Mainland China.com"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/Gz8-VLkE9KM?source=pa&hl=en-IN&gei=a40TY9W-NLeZz7sPwMSo4AU&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUiJ-77f5YCAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVEyZGpWeUxVeDNFQUWqASQKCC9tLzAxeHc5EAEqFiISY2hpbmVzZSByZXN0YXVyYW50KAA%26phdesc%3D_yco47UxeQw%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:12603622306288856073,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Mainland China</a></li></h4></abbr>
+        <p>Address: 1st Floor Silver Spring Complex, 5, JBS Haldane Ave, Halden Avenue, Kolkata, West Bengal 700105.<br>Phone: 093306 27508	</p>
+    </div>
+    
+    <div class="res5">
+        <abbr title="Golden Joy Restaurant.com"><h4><li><a href="https://www.facebook.com/goldenjoykolkata/">Golden Joy Restaurant</a></li></h4></abbr>
+        <p>Address: 50, Matheswartala Road, Topsia, Kolkata, West Bengal 700046. <br>Phone: 090518 70888</p>
+    </div>
+	
+	<div class="res6">
+		<abbr title="Chowman"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/QemQS6_yTUk?source=pa&hl=en-IN&gei=VI8TY4X3O_bv4-EPn_2eqAk&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUj2gpn8maqAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5WYjA1TFZIWlJSUkFCqgEkCggvbS8wMXh3ORABKhYiEmNoaW5lc2UgcmVzdGF1cmFudCgA%26phdesc%3DWd1n68YKeKM%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:3538551034385329443,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Chowman</a></li></h4></abbr>
+		<p>Address: BF-198, Sec-I, 5th Cross Rd, Bidhannagar, Kolkata, West Bengal 700064. <br> Phone: 090733 13184</p>
+	</div>
+	
+	<div class="res7">
+		<abbr title="Flavours of China, BAR - B - Q"><h4><li><a href="https://tamarindkolkata.com/">Flavours of China, BAR - B - Q</a></li></h4></abbr>
+		<p>Address: Someplace Else, Kolkata, Park Street Area, 43 & 47, Mother Teresa Sarani, Taltala, Kolkata, West Bengal 700016. <br>Phone: 3322298885</p>
+	</div>
+	
+	<div class="res8">
+		<abbr title="Krystal Chopstick"><h4><li><a href="https://www.facebook.com/krystalchopstick/">Krystal Chopstick</a></li></h4></abbr>
+		<p>Address: 71/H, Golpark, Hindustan Park, Gariahat, Kolkata, West Bengal 700029. <br>Phone: 033 2464 3449</p>
+	</div>
+	
+	<div class="res9">
+		<abbr title="Gunjan Chinese Food"><h4><li><a href="https://restaurant-guru.in/Madras-Restaurant-Kolkata/menu">Gunjan Chinese Food</a></li></h4></abbr>
+		<p>Address: 65, Surya Sen St, College Square, Kolkata, West Bengal 700009. <br>Phone: 098302 14468</p>
+	</div>
+	
+	<div class="res10">
+		<abbr title="Asia Kitchen"><h4><li><a href="hhttps://www.google.com/maps/reserve/v/dine/c/BEKZh1a4D4M?source=pa&hl=en-IN&gei=-pETY5K2FcDC4-EP_IeeqAE&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUjM75bS5YCAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVU0wYjA5NWVVMVJFQUWqASQKCC9tLzAxeHc5EAEqFiISY2hpbmVzZSByZXN0YXVyYW50KAA%26phdesc%3DdnNj3_Hrb1s%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:10121747804123171537,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Asia Kitchen</a></li></h4></abbr>
+		<p>Address: 4th Floor, Acropolis Mall, Rajdanga Main Rd, Kolkata, West Bengal 700107. <br>Phone: 033 4067 6110</p>
+	</div>
+	
+	<div class="res11">
+		<abbr title="Gunjan Chinese Food"><h4><li><a href="https://m.facebook.com/profile.php?id=268063916975221">Gunjan Chinese Food</a></li></h4></abbr>
+		<p>Address: 65, Surya Sen St, College Square, Kolkata, West Bengal 700009. <br>Phone: 098302 14468</p>
+	</div>
+	
+	<div class="res12">
+		<abbr title="Jimmy's Kitchen"><h4><li><a href="https://www.facebook.com/jimmyskitchenofficial/">Jimmy's Kitchen</a></li></h4></abbr>
+		<p>Address: 7, 1A, Acharya Jagadish Chandra Bose Rd, Mullick Bazar, Elgin, Kolkata, West Bengal 700017. <br>Phone:Phone: 033 2290 7139 </p>
+	</div>
+	
+	<div class="res13">
+		<abbr title="Chinoiserie"><h4><li><a href="https://m.facebook.com/chinoiserie.jq/posts">Chinoiserie</a></li></h4></abbr>
+		<p>Address: Taj Bengal, 34-B, Belvedere Rd, Alipore, Kolkata, West Bengal 700027. <br>Phone: 033 6612 3939</p>
+	</div>
+	
+	<div class="res14">
+		<abbr title="Tak Heng"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/sipf0ld12mE?source=pa&hl=en-IN&gei=4JUTY_zQNs2O3LUP2K-8eA&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUi03vHCsK2AgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU5OTUdKNWNIQjNSUkFCqgEkCggvbS8wMXh3ORABKhYiEmNoaW5lc2UgcmVzdGF1cmFudCgA%26phdesc%3Ddph_uNxe3Ek%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:14293928937287339022,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Tak Heng</a></li></h4></abbr>
+		<p>Address: P-452B, Keyatala Rd, Kolkata, West Bengal 700029. <br>Phone: 089810 02174</p>
+	</div>
+	
+	<div class="res15">
+		<abbr title="Mainland China"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/Gz8-VLkE9KM?source=pa&hl=en-IN&gei=T5YTY7yMGJ6Lz7sP3fKxuAM&sourceurl=https://www.google.com/async/lcl_akp?ei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUiJ-77f5YCAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVEyZGpWeUxVeDNFQUWqASQKCC9tLzAxeHc5EAEqFiISY2hpbmVzZSByZXN0YXVyYW50KAA%26phdesc%3D_yco47UxeQw%26vet%3D12ahUKEwiGnfqkj_n5AhX6IrcAHUGhBzQQ8UF6BAgBEF0..i%26lei%3DD4sTY8bZA_rF3LUPwcKeoAM%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:12603622306288856073,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Mainland China</a></li></h4></abbr>
+		<p>Address: 1st Floor Silver Spring Complex, 5, JBS Haldane Ave, Halden Avenue, Kolkata, West Bengal 700105. <br>Phone: 093306 27508</p>
+	</div>
+	
+	<div class="res16">
+		<abbr title="Big Boss Restaurant"><h4><li><a href="https://www.facebook.com/BigBossRestaurant/">Big Boss Restaurant</a></li></h4></abbr>
+		<p>Address: 54C, Matheswartala Road, Tangra, Kolkata, West Bengal 700046. <br>Phone: 033 2328 2405</p>
+	</div>
+	
+	<div class="res17">
+		<abbr title="Kafulok Bar & Restaurant"><h4><li><a href="https://m.facebook.com/profile.php?id=509039465801615">Kafulok Bar & Restaurant</a></li></h4></abbr>
+		<p>Address: 47, New Tangra Rd, Tangra, Kolkata, West Bengal 700046. <br>Phone: 098362 63833</p>
+	</div>
+	
+	<div class="res18">
+		<abbr title="Hong Kong Chinese Restaurant"><h4><li><a href="https://www.facebook.com/HongKongIV">Hong Kong Chinese Restaurant</a></li></h4></abbr>
+		<p>Address: 44, 1, Mirza Ghalib Street, Kolkata, West Bengal 700016. <br>Phone: 098302 46448</p>
+	</div>
+	
+	<div class="res19">
+		<abbr title="Fung Fa"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/E9F0hLdYSI8?source=pa&hl=en-IN&gei=uZgTY5LTMvXC4-EP1oek8Aw&sourceurl=https://www.google.com/async/lcl_akp?ei%3D3pYTY4jKCLLl4-EPgtSN0Ao%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUjkzvXG96qAgAhaKRAAEAEYABgBGAMiHWNoaW5lc2UgcmVzdGF1cmFudCBpbiBrb2xrYXRhkgESY2hpbmVzZV9yZXN0YXVyYW50mgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVJ2WHpsaGJuZEJSUkFCqgEkCggvbS8wMXh3ORABKhYiEmNoaW5lc2UgcmVzdGF1cmFudCgA%26phdesc%3D9fxcYLQXKnU%26vet%3D12ahUKEwiIsbzGmvn5AhWy8jgGHQJqA6oQ8UF6BAgBEF0..i%26lei%3D3pYTY4jKCLLl4-EPgtSN0Ao%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:13865494111963451404,f:rlni,_id:akp_tsuid_14,_pms:s_es2021,_fmt:pc">Fung Fa</a></li></h4></abbr>
+		<p>Address: 119/A/1, Matheshwartala Road, Tangra Gobinda Khathick, Road, Kolkata, West Bengal 700046. <br>Phone: 091238 02816</p>
+	</div>
+	
+	<div class="res20">
+		<abbr title="Yauatcha Kolkata"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/MjLU17oQiug?source=pa&hl=en-IN&gei=ZZkTY_LEI8ir4-EP67iV2AM&sourceurl=https://www.google.com/async/lcl_akp?ei%3D3pYTY4jKCLLl4-EPgtSN0Ao%26tbs%3Dlrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9%26lqi%3DCh1DaGluZXNlIHJlc3RhdXJhbnQgaW4gS29sa2F0YUjDgpv-nqqAgAhaJxAAEAEYARgDIh1jaGluZXNlIHJlc3RhdXJhbnQgaW4ga29sa2F0YZIBEmRpbV9zdW1fcmVzdGF1cmFudJoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VSSk56aGZSMkpuRUFFqgEkCggvbS8wMXh3ORABKhYiEmNoaW5lc2UgcmVzdGF1cmFudCgA%26phdesc%3DXZCiu94mK8E%26vet%3D12ahUKEwiIsbzGmvn5AhWy8jgGHQJqA6oQ8UF6BAgBEF0..i%26lei%3D3pYTY4jKCLLl4-EPgtSN0Ao%26tbm%3Dlcl%26q%3DChinese%2Brestaurant%2Bin%2BKolkata%26cs%3D1%26async%3Dludocids:15076252383659302939,f:rlni,_id:akp_tsuid_14,_pms:s_es2021,_fmt:pc">Yauatcha Kolkata</a></li></h4></abbr>
+		<p>Address: 5th Floor, Quest Mall Park Circus, 33, Syed Amir Ali Ave, Beck Bagan, Ballygunge, Kolkata, West Bengal 700017. <br>Phone: 092222 22800</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="*"><h4><li><a href="**">*</a></li></h4></abbr>
+		<p>*. <br>Phone: **</p>
+	</div>
+	<div class="end">
+		<h1 style="background-color:black; text-align: center; color:white">.........THANK YOU.........</h1>
+		<h3 style="background-color:black; text-align: center; color:white">"Les Gourmand"</h3>
+	</div>
+</ul>
+</section>
+</div>
+<a href="#SIR" class="to-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://kit.fontawesome.com/03af8a5f7a.js" crossorigin="anonymous">
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", () =>{
+        if (window.pageYOffset > 100) {
+          toTop.classList.add("active");  
+        }else {
+          toTop.classList.remove("active");
+        }
+    }) 
+    </script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restoran | South-Indian Restaurants</title>
+<link rel="stylesheet" href="#style">
+</head>
+<style>
+	*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: comic sans ms;
+    scroll-behavior: smooth;
+    }
+    section{
+    height: 100vh;
+    }
+    .banner{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),url(http://static.designowl.com.s3-website-us-east-1.amazonaws.com/uploads/expert_projects/775/south-side-flavours/gym-restaurant-design-night-club-traditional-restos-bars-wellness-vadodara-ruchita-mehta-and-trupesh-purohit-10002sep20161406031_compressed.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    }
+    .NvBar{
+    width: 90%;
+    height: fit-content;
+    margin: 0.2%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: fixed;
+    }
+    .logo{
+        width: 180px;
+        height: 180px;
+        cursor: pointer;
+        filter: drop-shadow(1px 2px 0px  rgb(171, 255, 98));
+        padding-block: 10%;
+        padding-top: 12%;
+        margin-top: 55px;
+    }
+    .NvBar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    }
+    .NvBar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    }
+    .NvBar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #4ba52a;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+    }
+    .NvBar ul li:hover::after{
+    width: 100%;
+    }
+    .sticky .NvBar{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 0000;
+        box-shadow: var(--shadow);
+    }
+    .sticky .NvBar:hover{
+        position:fixed;
+        padding-top: 0;
+        top:0;
+        left:0;
+        height:14%;
+        width:100%;
+        z-index: 9999;
+        background-color: rgba(0, 90, 45, 0.888);
+        box-shadow: var(--shadow);
+        transition: 0.5s ease-in-out;
+    }
+    .name{
+        width: 70%;
+        position: absolute;
+        top: 15%;
+        transform: translateY(30%);
+        text-align: center;
+        color: #fff;
+        }
+        .name h3{
+        font-size: 70px;
+        font-family: galada;
+        margin-top: 5px;
+        margin-left: 39%;
+        text-align: center;
+        }
+        .name p{
+        margin: 80px auto;
+        margin-left: 39%;
+        font-size: 50px;
+        font-family: galada;
+        line-height: 25px;
+        text-align: center;
+        }
+        .up ul li{
+            list-style: none;
+            margin-top: 200px;
+            width: 1000px;
+            text-align: left;
+            margin: 20px 10px;
+            margin-right: 0px;
+            background: transparent;
+            cursor: pointer;
+            }
+            .up a{
+            color: #800000;
+            font-family: Serif;
+            font-weight: bolder;
+            font-size: 70px;
+            }
+            .up p{
+            text-align: left;
+            font-size: 30px;
+            font-family: serif;
+            font-weight: bolder;
+            margin: 20px 20px;
+            color: rgb(205, 136, 80);
+            }
+            ::-webkit-scrollbar{
+                width:0.5rem;
+                height:50 px;
+            }
+            ::-webkit-scrollbar-track{
+                background-color: var(--black);
+                background: green;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color: var(--black);
+                background: white;
+                border-radius:0.4rem;
+                border:0.1rem solid transparent;
+                background-clip:content-box;
+            }
+            .to-top{
+                background: hsl(89, 15%, 40%);
+                position: fixed;
+                bottom: 40px;
+                right: 32px;
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                line-height: 50px;
+                font-size: 22px;
+                color: black;
+                text-decoration: none;
+            }
+             .to-top.active {
+                bottom: 32px;
+                pointer-events: auto;
+                opacity: 1;
+             }
+             /* The container <div> - needed to position the dropdown content */
+         .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+          .dropdown:hover .dropbtn {
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+          }
+          
+          
+          /* Dropdown Content (Hidden by Default) */
+          .drp-cnt {
+            margin: 0px 0px 0px 0px;
+            display: none;
+            position:absolute;
+            width: 120px;
+            align-items: center;
+            top: 34px;
+            z-index: 1;
+          }
+          .dropdown:hover .drp-cnt {
+            display: block;
+            position: absolute;
+            margin: 0px 0px 0px 0px;
+        }
+          
+          /* Show the dropdown menu on hover */
+        .drp-cnt img{  
+            padding: 0px 0px 0px 0px;
+            border: 1px solid rgb(49, 0, 0);
+            display: block;
+            transition: all 0.5s ease-in-out;
+            background: rgba(98, 52, 3, 0.832);
+            align-items: center;
+            margin: 0px 0px 0px 0px;
+            max-width: 87%;
+            max-height: 90%;
+            filter: drop-shadow(10px 10px 10px rgb(51, 18, 0));
+        }
+        .s-about{
+            height: 50vh;
+        background-color: rgba(70, 18, 0, 0.732);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        }
+        .s-about p{
+            color: rgb(68, 14, 0);
+            text-align: center;
+            top: 315%;
+        }
+</style>
+<body class="sticky">
+    <section  class="banner" id="SIR">
+    <div class="NvBar">
+    <a href="onepg1.html">
+    <abbr title="Renstora.com"><img src="img/renstora.svg" class="logo"></abbr>
+    </a>
+    <ul>
+    <li><a class="up-link" href="#rest">Restaurants</a></li>
+    <li><a href="new con.html">Contacts</a></li>
+    </ul>
+    </section>
+    <div class="name">
+    <h3>SOUTH INDIAN RESTAURANTS</h3>
+    <p>Check Below</p>
+    </div>
+    </div>
+<div class="nme">
+<section class="up" id="rest">
+<ul>
+    <div class="res">
+        <abbr title="sankalponline.com"><h4><li><a href="http://www.sankalponline.com/">Sankalp Restaurant</a></li></h4></abbr>
+        <p>Address: Shop R 4A, Plot, Podium Level, Godrej Waterside, 5, DP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091.<br>Phone:098313 69997</p>
+    </div>
+
+    <div class="res">
+        <abbr title="tamarindkolkata.com"><h4><li><a href="https://tamarindkolkata.com/">Tamarind Restaurant</a></li></h4></abbr>
+        <p>Address: 177, Sarat Bose Road Opp. DKS, Deshapriya Park W, Kolkata, West Bengal 700026.<br>Phone: 079808 65074</p>
+    </div>
+    
+    <div class="res">
+        <abbr title="Peerlesshotels.com"><h4><li><a href="https://peerlesshotels.com/the-peerless-inn/">The Chutney Co.</a></li></h4></abbr>
+        <p> Address: 12, Jawaharlal Nehru Rd, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700013.<br>Phone: 098317 80405</p>
+    </div>
+
+    <div class="res">
+        <abbr title="www.facebook.com/firangimadras"><h4><li><a href="https://www.facebook.com/firangimadras/">Firangi Madras</a></li></h4></abbr>
+        <p>Address: Address: Bangur Avenue, 22, Block C, Lake Town, Kolkata, West Bengal 700055.<br>Phone: 098316 67330</p>
+    </div>
+    
+    <div class="res">
+        <abbr title="chennaisquarekol."><h4><li><a href="https://www.facebook.com/chennaisquarekol">Chennai Square</a></li></h4></abbr>
+        <p>Address: 4th Floor, Carnival Cinemas & Big Bazaar Building, 4th Floor, Sector 3, IB Block - 177&178 Salt Lake City, Near Columbia Asia Hospital, above Big Bazaar on, Kolkata, West Bengal 700106
+            . <br>Phone: 090512 27333</p>
+    </div>
+	
+	<div class="res">
+		<abbr title="Jyoti Vihar"><h4><li><a href="https://www.tripadvisor.in/Restaurant_Review-g304558-d3192936-Reviews-Jyoti_Vihar-Kolkata_Calcutta_Kolkata_District_West_Bengal.html">Jyoti Vihar</a></li></h4></abbr>
+		<p>Address: 3A/1, Ho Chi Minh Sarani, Russel Street, West Bengal 700071. <br> Phone: 097480 84091</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Tamarind Restaurant"><h4><li><a href="https://tamarindkolkata.com/">Tamarind Restaurant</a></li></h4></abbr>
+		<p>Address: 177, Sarat Bose Road Opp. DKS, Deshapriya Park W, Kolkata, West Bengal 700026. <br>Phone: 079808 65074</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Shree Balaji South Indian Food"><h4><li><a href="https://www.facebook.com/Shree-balaji-south-indian-food-111593383935190/">Shree Balaji South Indian Food (Hindu-Jhatka)</a></li></h4></abbr>
+		<p>Address: 160, Block A, Lake Town, Kolkata, West Bengal 700089. <br>Phone: 097482 45471</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="মাদ্রাজ রেস্তোরাঁ"><h4><li><a href="https://restaurant-guru.in/Madras-Restaurant-Kolkata/menu">Madras Restaurant</a></li></h4></abbr>
+		<p>Address: 25/B C R Avenue Crossing of C R Avenue, &, Ganesh Chandra Ave, Kolkata, West Bengal 700072. <br>Phone: 098741 23751</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Anand Veg Restaurant"><h4><li><a href="https://www.dineout.co.in/kolkata/anand-restaurant-chandni-chowk-central-kolkata-26942/menu">Anand Veg Restaurant</a></li></h4></abbr>
+		<p>Address: No.19, Chittaranjan Ave, near Chandi Chowk, Esplanade, Chowringhee North, Bow Barracks, Kolkata, West Bengal 700072. <br>Phone: +91 33 2212 8344</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Banana Leaf"><h4><li><a href="https://www.dineout.co.in/kolkata/banana-leaf-southern-avenue-south-kolkata-33577">Banana Leaf</a></li></h4></abbr>
+		<p>Address: P264 C, CIT, Scheme 47, Near Vivekananda Park, Hemanta Mukherjee Sarani, Kolkata, West Bengal 700029. <br>Phone: 033 4603 9144</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Rasam"><h4><li><a href="https://www.google.com/maps/reserve/v/dine/c/1iNsJ4cK7mY?source=pa&hl=en-IN&gei=GnUQY9KeN5aF4-EP6_mMkAc&sourceurl=https://www.google.com/async/lcl_akp?ei%3DZGsQY_zZAoObseMPstWH6AU%26tbs%3Dlrf:!1m5!1u5!3m2!5m1!1sgcid_3south_1indian_1restaurant!4e2!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e5!2m1!1e1!2m1!1e3!3sChASDmN1aXNpbmVfZmlsdGVyIAEqAklO,lf:1,lf_ui:9%26lqi%3DCiNzb3V0aCBpbmRpYW4gcmVzdGF1cmFudHMgaW4ga29sa2F0YUjCrd_FmJaAgAhaORAAEAEQAhgAGAEYAhgEIiNzb3V0aCBpbmRpYW4gcmVzdGF1cmFudHMgaW4ga29sa2F0YSoECAMQApIBF3NvdXRoX2luZGlhbl9yZXN0YXVyYW50qgErCgkvbS8wMWg1cTAQASocIhhzb3V0aCBpbmRpYW4gcmVzdGF1cmFudHMoAA%26phdesc%3D0etIQ6Vp9lM%26vet%3D12ahUKEwj8m53VlPP5AhWDTWwGHbLqAV0Q8UF6BAgBEGs..i%26lei%3DZGsQY_zZAoObseMPstWH6AU%26tbm%3Dlcl%26q%3Dsouth%2Bindian%2Brestaurants%2Bin%2Bkolkata%26cs%3D1%26async%3Dludocids:15363317468266031165,f:rlni,_id:akp_tsuid_10,_pms:s_es2021,_fmt:pc">Rasam</a></li></h4></abbr>
+		<p>Address: Salt Lake, The Stadel Hotel, Ground Floor, JB Block, Sector III, Bidhannagar, West Bengal 700064. <br>Phone: </p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Firangi Madras"><h4><li><a href="https://www.facebook.com/firangimadras/">Firangi Madras</a></li></h4></abbr>
+		<p>Address: Bangur Avenue, 22, Block C, Lake Town, Kolkata, West Bengal 700055. <br>Phone: 098316 67330</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Popular South Indian"><h4><li><a href="https://www.justdial.com/Kolkata/Popular-South-Indian-Food-Near-Russia-More-Lake-Gardens/033PXX33-XX33-150703120713-H7H6_BZDET">Popular South Indian</a></li></h4></abbr>
+		<p>Address: G924+RXJ, Prince Anwar Shah Rd, Lords More, Lake Gardens, Kolkata, West Bengal 700045. <br>Phone: 086973 28544</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Ralli's"><h4><li><a href="https://www.justdial.com/Kolkata/Rallis-Near-Between-Esplanade-Metro-Gate-No-4-5-Dharmatala/033P19646_BZDET">Ralli's</a></li></h4></abbr>
+		<p>Address: 10-D, Jawaharlal Nehru Rd, New Market Area, Chowringhee North, Taltala, Kolkata, West Bengal 700013. <br>Phone: 098312 22607</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Prema Vilas"><h4><li><a href="https://www.facebook.com/thepremavilas/">Prema Vilas</a></li></h4></abbr>
+		<p>Address: 63/1, Rash Behari Ave, Opp. Lake Market, Kolkata, West Bengal 700026. <br>Phone: 098300 77572</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Ramanee - The soul of Dakshin"><h4><li><a href="https://www.facebook.com/ramanee.savourites/">Ramanee - The soul of Dakshin</a></li></h4></abbr>
+		<p>Address: P 569, Golpark, Hemanta Mukherjee Sarani, lake Terrace, Ballygunge, Kolkata, West Bengal 700029. <br>Phone: 090733 40499</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Rao's Udipi Home"><h4><li><a href="**">Rao's Udipi Home</a></li></h4></abbr>
+		<p>Address: 25, Jatindas Rd, opposite Carfill Petrol Pump, Lake Market, Kalighat, Kolkata, West Bengal 700029. <br>Phone: 098301 71715</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Swad - South Indian Restaurant"><h4><li><a href="https://www.justdial.com/Kolkata/Swad-Gariahat/033PXX33-XX33-190307211056-F9T9_BZDET">Swad - South Indian Restaurant</a></li></h4></abbr>
+		<p>Address: 38/2/c, Gariahat Rd, Dhakuria, South End Park, Kolkata, West Bengal 700029. <br>**</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Flavours of South"><h4><li><a href="https://www.facebook.com/profile.php?id=100054642122077">Flavours of South</a></li></h4></abbr>
+		<p>Address: 15b, Kavi Bharati Sarani, Lake Market, Kalighat, Kolkata, West Bengal 700029. <br>**</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Firangi Madras"><h4><li><a href="https://www.facebook.com/firangimadras/">Firangi Madras</a></li></h4></abbr>
+		<p>Address: Bangur Avenue, 22, Block C, Lake Town, Kolkata, West Bengal 700055. <br>Phone: 098316 67330</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Ganesh South Indian food"><h4><li><a href="https://www.justdial.com/Kolkata/Ganesh-South-Indian-Food-Near-Jyangra-Chowmatha-Sahabagan-Jyangra-Aswini-Nagar/033PXX33-XX33-190205193015-K2E3_BZDET">Ganesh South Indian food</a></li></h4></abbr>
+		<p>Address: A/E/1, Rajarhat Main Rd, Sahabagan, Jyangra, Baguiati, Kolkata, West Bengal 700059. <br>Phone: 090512 36569</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Dakshin Masala"><h4><li><a href="https://www.facebook.com/dakshin.masala/">Dakshin Masala</a></li></h4></abbr>
+		<p>Address: 25, Jatindas Rd, opposite Carfill Petrol Pump, Lake Market, Kalighat, Kolkata, West Bengal 700029. <br>Phone: 09831054521</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Tirupati South Indian Food"><h4><li><a href="**">Tirupati South Indian Food</a></li></h4></abbr>
+		<p>Address: 104, Raja Ram Mohan Sarani Rd, College Street, Kolkata, West Bengal 700009. <br>Phone: **</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Uttapam - Flavours of South"><h4><li><a href="https://www.swiggy.com/restaurants/uttapam-flavours-of-south-central-kolkata-kolkata-459193?utm_source=GooglePlaceOrder&utm_campaign=GoogleMap&is_retargeting=true&media_source=GooglePlaceOrder">Uttapam - Flavours of South</a></li></h4></abbr>
+		<p>Address: 65C, Shakespeare Sarani Rd, Mullick Bazar, Park Street area, Kolkata, West Bengal 700017. <br>Phone: 099036 10090</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Tirupati South Indian Dishes"><h4><li><a href="https://www.justdial.com/Kolkata/Tirupati-South-Indian-Dishes-Near-Allahabad-Bank-Naktala/033PXX33-XX33-140305162311-K7X5_BZDET">RTirupati South Indian Dishes</a></li></h4></abbr>
+		<p>Address: 364, 21, Netaji Subhash Chandra Bose Rd, Naktala, Garia, Kolkata, West Bengal 700047. <br>Phone: 098365 09866</p>
+	</div>
+	
+	
+ 	<div class="res">
+		<abbr title="The Southern Pantry"><h4><li><a href="https://www.zomato.com/kolkata/southern-pantry-chandni-chowk">The Southern Pantry</a></li></h4></abbr>
+		<p>Address: 1 BN, Creek Row, Esplanade, Chandni Chawk, Kolkata, West Bengal 700013. <br>Phone: 098310 54521</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="New Madras Tiffin"><h4><li><a href="https://www.justdial.com/Kolkata/New-Madras-Tiffin-Near-Town-School-Shyambazar/033PXX33-XX33-131017153336-U6I6_BZDET">New Madras Tiffin</a></li></h4></abbr>
+		<p>Address: Town School, 138, Bidhan Sarani Rd, Shyambazar, Sovabazar, Hati Bagan, Shyam Bazar, Kolkata, West Bengal 700004. <br>Phone: 092313 38718</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Maa Tara Southindian Food"><h4><li><a href="https://www.justdial.com/Kolkata/Ma-Tara-South-Indian-Dosa-Point-Near-Action-Area-I-Rain-Bihar-New-Town/033PXX33-XX33-180627023051-W4H7_BZDET">Maa Tara Southindian Food</a></li></h4></abbr>
+		<p>Address: Street Number 64, AF Block(Newtown), Action Area I, Newtown, New Town, West Bengal 700156. <br>Phone: 089277 67641</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Tirupati South Indian Food"><h4><li><a href="https://www.justdial.com/Kolkata/Tirupati-South-Indian-Dishes-Near-Allahabad-Bank-Naktala/033PXX33-XX33-140305162311-K7X5_BZDET">Tirupati South Indian Food</a></li></h4></abbr>
+		<p>Address: 104, Raja Ram Mohan Sarani Rd, College Street, Kolkata, West Bengal 700009. <br>Phone: 03324114025</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Udipi Home Restaurant"><h4><li><a href="https://www.zomato.com/kolkata/udipi-home-desapriya-park">Udipi Home Restaurant</a></li></h4></abbr>
+		<p>Address: P 545, Lake Rd, Hemanta Mukherjee Sarani, lake Terrace, Ballygunge, Kolkata, West Bengal 700029. <br>Phone: 098311 10202</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Gangotri, a Veg Nukkad"><h4><li><a href="http://www.gangotriveg.com/menu.html">Gangotri, a Veg Nukkad</a></li></h4></abbr>
+		<p>Address: CF 334, CF Block, Sector 1, Bidhannagar, Kolkata, West Bengal 700064. <br>Phone: Phone: 093393 77505</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Madras Hindu Restaurant"><h4><li><a href="https://www.eazydiner.com/kolkata/madras-hindu-restaurant-dalhousie-bbd-bagh-603890">Madras Hindu Restaurant</a></li></h4></abbr>
+		<p>Address: 23, Strand Rd, near Marshal House, Fairley Place, B.B.D. Bagh, Kolkata, West Bengal 700001. <br>Phone: 098302 24706</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="Anna's In"><h4><li><a href="**">Anna's In</a></li></h4></abbr>
+		<p>Address: 12h, Deshapriya Park Rd, Hazra, Kalighat, Kolkata, West Bengal 700026. <br>Phone: **</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="The Southern Pantry"><h4><li><a href="https://www.justdial.com/Kolkata/Southern-Pantry/033PXX33-XX33-200218071342-M2B3_BZDET">The Southern Pantry</a></li></h4></abbr>
+		<p>Address: 8, BT Rd, Rathtala, Adarsha Pally, Belghoria, Kolkata, West Bengal 700056. <br>Phone: 9163119330</p>
+	</div>
+	
+	<div class="res">
+		<abbr title="North & south indian restaurant"><h4><li><a href="https://www.justdial.com/Kolkata/North-South-Indian-New-Market/033PXX33-XX33-160219113747-L4R2_BZDET">North & south indian restaurant</a></li></h4></abbr>
+		<p>Address: 3, Humayun Pl, New Market Area, Dharmatala, Taltala, Kolkata, West Bengal 700087. <br>Phone: **</p>
+	</div>
+	<div class="end">
+		<h1 style="background-color:black; text-align: center; color:white">.........THANK YOU.........</h1>
+		<h3 style="background-color:black; text-align: center; color:white">"Les Gourmand"</h3>
+	</div>
+</ul>
+</section>
+</div>
+<a href="#SIR" class="to-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://kit.fontawesome.com/03af8a5f7a.js" crossorigin="anonymous">
+    const toTop = document.querySelector(".to-top");
+    window.addEventListener("scroll", () =>{
+        if (window.pageYOffset > 100) {
+          toTop.classList.add("active");  
+        }else {
+          toTop.classList.remove("active");
+        }
+    }) 
+    </script>
+</body>
+</html>

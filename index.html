@@ -2,48 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music webPage</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Kaushan+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" type="text/css" href="#style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="navbar">
-            <img src="img/logo5.png" class="logo">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SPECIFICATIONS</a></li>
-                <li><a href="#">PRODUCT</a></li>
-                <li><a href="#">CONNECT</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="left-col">
-                <h2>music studio</h2>
-            </div>
-            <div class="right-col">
-                <p>click here to Listen</p>
-                <img src="img/playing7.png" id="icon">
-            </div>
-        </div>
-    </div>
-    <audio id="mysong">
-        <source src="audio/12.mp3" type="audio/mp3">
-    </audio>
-    <script>
-        var mysong=document.getElementById("mysong");
-        var icon=document.getElementById("icon");
-        icon.onclick=function(){
-              if(mysong.paused){
-                mysong.play();
-                icon.src="img/pausing7.png";
-              }else{
-                mysong.pause();
-                icon.src="img/playing7.png";
-              }
+<style>
+    body
+    {
+       margin: 0;
+       padding: 0;
+       background-image: linear-gradient(rgb(42, 22, 5, 0.744),rgba(42, 22, 5, 0.744)), url(https://c1.wallpaperflare.com/preview/467/176/26/background-food-tasty-olives.jpg);
+       background-size: cover;
+       background-position: fixed;
+    }
+.from-box{
+    background: rgba(red, green, blue, alpha);
+    color:#fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 400px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #000;
+    }
+    .user{
+    width: 105px;
+    height: 105px;
+    border-radius: 100%;
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 50px);
+}
+.user .img{
+    margin: auto;
+}
+
+h1{
+    margin: 0;
+   padding: 0 0 20px;
+   text-align: center;
+   font-size: 22px;
+}
+.from-box p{
+   margin: 0;
+   padding: 0;
+   font-weight: bold;
+   text-align: initial;
+   margin-bottom: 17px;
+}
+.from-box input{
+   width: 100%;
+   margin-bottom: 20px;
+}
+.from-box input[type="text"], input[type="password"]
+{
+   border: none;
+   border-bottom: 2px solid #fff;
+   background: transparent;
+   outline: none;
+   height: 40px;
+   color: #fff;
+   font-size: 16px;
+}
+.from-box input[type="submit"]
+{
+   border: none;
+   outline: none;
+   height: 40px;
+   background-color: #fb2525;
+   font-size: 1.2em;
+   font-weight: bold;
+}
+.from-box input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: rgba(243, 181, 56, 0.574);
+    color: #000;
+}
+.from-box a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #cec6c6;
+}
+
+.from-box a:hover
+{
+    color: #8e6139;
+}
+.NvBar{
+    width: 75%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .logo{
+    width: 120px;
+    cursor: pointer;
+    filter: drop-shadow(1px 2px 0px rgba(48, 25, 0, 0.767));
+    }
+    :root{
+            --primary: hsla(35, 100%, 21%, 0.733);
+            --secondary: hsla(108, 100%, 25%, 0.733);
         }
-    </script>
+        .load{
+            background: url(welcome.gif) no-repeat center center, linear-gradient(135deg, var(--primary), var(--secondary)),rgb(0, 0, 0) ;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            background-size: 30%;
+            background-position: center;
+            z-index: 100;
+        }
+</style>
+
+<body>
+    <div id="load">
+
+    </div>
+    <div class="NvBar">
+        <a href="onepg1.html">
+            <abbr title="Renstora.com"><img src="/img/renstora.svg" class="logo"></abbr>
+            </a>
+    </div>
+    <div class="from-box">
+        <img src="https://cdn.create.vista.com/api/media/small/471000168/stock-vector-black-male-user-symbol-gold" class="user">
+        <br>
+              <h1>Sign In here</h1>
+                  <form>
+                  <p>Username</p>
+                  <input type="text"  placeholder="Enter Username">
+                  <p>Password</p>
+                  <input type="Password" placeholder="Enter Password">      
+                  <input type="submit"  value="SIGN IN">
+                  <center>
+                  <a href="forgetpassword.html"> Forget your password?</a><br>
+                   <a href="SU3.html">Don't have an account?</a>
+                   </center>
+              </form>
+         </div>
+         <script>
+            var loader=document.getElementById("load");
+            window.addEventListener("pre", function(){
+                loader.style.display="none";
+            })
+        </script>
 </body>
 </html>
